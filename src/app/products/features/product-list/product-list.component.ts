@@ -23,6 +23,7 @@ import { DataViewModule } from "primeng/dataview";
 import { DialogModule } from "primeng/dialog";
 import { ImageModule } from "primeng/image";
 import { RatingModule } from "primeng/rating";
+import { BadgeModule } from 'primeng/badge';
 
 const emptyProduct: Product = {
   id: 0,
@@ -58,6 +59,7 @@ const emptyProduct: Product = {
     StatusFormattingPipe,
     RatingModule,
     FormsModule,
+    BadgeModule
   ],
 })
 export class ProductListComponent implements OnInit {

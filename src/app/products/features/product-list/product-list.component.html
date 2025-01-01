@@ -17,11 +17,19 @@
                     <div class="flex-initial text-900 align-bottom">{{ product.price | madCurrency}}</div>
                 </div>
 
-                <p-rating [(ngModel)]="product.rating" [cancel]="false" [readonly]="true" stars="10"></p-rating>
-                <div class="flex-initial text-sm top-100 align-self-end" [appStockColor]="product.inventoryStatus">{{product.inventoryStatus | statusFormatting}}</div>
+                <div class="flex gap-2">
+                    <div class="flex-initial surface-100 p-1 border-round-xl shadow-2">
+                        {{product.rating}} <i class="pi pi-star-fill text-yellow-500"></i>
+                    </div>
+                    <div class="flex-initial  surface-100 p-1 border-round-xl shadow-2">
+                        <span class="flex-initial text-sm font-medium top-100 align-self-end" [appStockColor]="product.inventoryStatus">{{product.inventoryStatus | statusFormatting}}</span>
+                    </div>
+                </div>
+                <!-- <p-rating [(ngModel)]="product.rating" [cancel]="false" [readonly]="true" stars="10"></p-rating> -->
+                
 
-                <ng-template pTemplate="content" class="white-space-normal">
-                    <p class="text-sm">
+                <ng-template pTemplate="content">
+                    <p class="text-sm mt-4">
                         {{product.description}} ...
                     </p>
                 </ng-template>
@@ -35,6 +43,7 @@
                             <input type="number" pInputText 
                                 #quantityInput
                                 min="0"
+                                value="0"
                                 step="1"
                                 [disabled]="product.inventoryStatus==='OUTOFSTOCK'"
                                 class="text-base text-color p-2 border-1 w-2">

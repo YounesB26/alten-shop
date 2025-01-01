@@ -18,7 +18,7 @@ export class StockColorDirective {
         break;
       }
       case "LOWSTOCK": {
-        this.el.nativeElement.classList.add("text-orange-400");
+        this.el.nativeElement.classList.add("text-orange-500");
         break;
       }
       case "OUTOFSTOCK": {
