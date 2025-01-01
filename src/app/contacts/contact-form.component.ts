@@ -18,9 +18,9 @@ import { MessageService } from "primeng/api";
 import { ToastModule } from "primeng/toast";
 
 @Component({
-  selector: "app-contact-list",
-  templateUrl: "./contact-list.component.html",
-  styleUrls: ["./contact-list.component.scss"],
+  selector: "app-contact-form",
+  templateUrl: "./contact-form.component.html",
+  styleUrls: ["./contact-form.component.scss"],
   standalone: true,
   imports: [
     FormsModule,
