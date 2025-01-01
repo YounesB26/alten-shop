@@ -8,9 +8,5 @@ export const PRODUCTS_ROUTES: Routes = [
     path: "list",
     component: ProductListComponent,
   },
-  {
-    path: "cart",
-    component: CartComponent,
-  },
   { path: "**", redirectTo: "list" },
 ];
