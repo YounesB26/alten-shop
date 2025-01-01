@@ -1,0 +1,32 @@
+<div class="block m-5">
+  <h1>Contact us</h1>
+  <div class="block p-4 surface-100 font-bold border-round">
+    <form #contactForm="ngForm" (ngSubmit)="onFormSubmit(contactForm)">
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          #email="ngModel"
+          id="email"
+          type="text"
+          required
+          ngModel
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          type="text"
+          ngModel
+          required
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        ></textarea>
+      </div>
+      <div class="field flex justify-content-center">
+        <!-- button -->
+        <p-button type="submit" label="Submit" icon="pi pi-check"></p-button>
+      </div>
+    </form>
+  </div>
+</div>

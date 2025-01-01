@@ -28,7 +28,7 @@ import { MenuItem } from "primeng/api";
         {
             label: 'Contact',
             icon: 'pi pi-user',
-            routerLink: ['/contact/form']
+            routerLink: ['/contacts/form']
         }
     ]
   }
