@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { ContactForm } from "./contact-list.component";
+import { ContactForm } from "./contact-form.component";
 
 export const CONTACTS_ROUTES: Routes = [
   {
