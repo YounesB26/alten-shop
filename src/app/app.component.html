@@ -28,7 +28,9 @@
 <p-overlayPanel #overlay [showCloseIcon]="false" [style]="{width: '500px'}" class="mr-5">
     <ng-template pTemplate>
         <p-table [value]="cartContent" 
-                [paginator]="false">
+            [scrollable]="true" 
+            scrollHeight="400px"
+            [paginator]="false">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Name</th>
