@@ -2,7 +2,7 @@
 
 <p-button label="Créer produit" (onClick)="onCreate()" class="block text-center"/>
 
-<p-dataView #dv [value]="products()">
+<p-dataView #dv [value]="products()" [paginator]="true" [rows]="5" [paginatorPosition]="'bottom'">
     <ng-template pTemplate="list" let-products>
         @for (product of products; track product; let i = $index) {
             <p-card class="block mb-2">
@@ -40,13 +40,14 @@
                         <p-button label="Supprimer" severity="danger" (onClick)="onDelete(product)" />
 
                         <div class="p-inputgroup">
-                            <input type="number" pInputText 
+                            <input type="number"
+                                pInputText 
                                 #quantityInput
                                 min="0"
                                 value="0"
                                 step="1"
                                 [disabled]="product.inventoryStatus==='OUTOFSTOCK'"
-                                class="text-base text-color p-2 border-1 w-2">
+                                class="text-base text-color p-2 border-1 max-w-4rem">
                             <button 
                                 type="button" 
                                 pButton 

@@ -25,6 +25,7 @@ import { ImageModule } from "primeng/image";
 import { RatingModule } from "primeng/rating";
 import { BadgeModule } from 'primeng/badge';
 
+
 const emptyProduct: Product = {
   id: 0,
   code: "",
@@ -60,6 +61,7 @@ const emptyProduct: Product = {
     RatingModule,
     FormsModule,
     BadgeModule
+    
   ],
 })
 export class ProductListComponent implements OnInit {
